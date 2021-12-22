@@ -13,4 +13,4 @@ tangent---->tangent,
 
 
 Just replace the mesh class in your copy of ursina with the mesh class provided over here and set the parameter TB to True while creating the mesh
-vertex,uv  and triangle lists should be lists of lists [ ((0,0,0),(0,0,0)) form not (Vec3(0,0,0),Vec3(0,0,0)) ]
+vertex and uv data should be in the form of Vec3 and Vec2 while the triangle data should be in a list.
