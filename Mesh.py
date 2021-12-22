@@ -321,14 +321,14 @@ class Mesh(NodePath):
 
             for j in i:
                 if t[j] == 0:
-                    t[j] = totup3(tangent)
+                    t[j] = tangent
                 else:
-                    t[j] = totup3((t[j] + tangent) / 2)
+                    t[j] = (t[j] + tangent) / 2
 
                 if b[j] == 0:
-                    b[j] = totup3(bitangent)
+                    b[j] = bitangent
                 else:
-                    b[j] = totup3((b[j] + bitangent) / 2)
+                    b[j] = (b[j] + bitangent) / 2
 
         return t, b
 
@@ -339,10 +339,6 @@ def toVec3(tup):
 
 def toVec2(tup):
     return Vec2(tup[0], tup[1])
-
-
-def totup3(vec):
-    return (vec.x, vec.y, vec.z)
 
 
 if __name__ == '__main__':
